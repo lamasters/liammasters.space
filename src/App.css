@@ -87,3 +87,26 @@
   margin-bottom: 50px;
   color: #FFF;
 }
+
+.timeline-item {
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.timeline-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 25px;
+}
+
+.round {
+  border-radius: 100%;
+}
+
+.timeframe {
+  color: #aaa;
+}
+
+.paper {
+  width: 200px;
+}
