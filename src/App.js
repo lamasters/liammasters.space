@@ -24,14 +24,17 @@ class App extends React.Component {
     window.onresize = this.setContentWidth.bind(this);
 
     let playerWidth = "400";
+    let showNav = false;
     if (window.innerWidth > 800) {
       playerWidth = "800";
+      showNav = true;
     }
 
     this.state = {
       home: React.createRef(),
       toTop: null,
-      playerWidth: playerWidth
+      playerWidth: playerWidth,
+      showNav: showNav
     }
   }
 
@@ -46,12 +49,14 @@ class App extends React.Component {
 
   setContentWidth() {
     let playerWidth = String(window.innerWidth - 50);
+    let showNav = false;
     if (window.innerWidth > 800) {
       playerWidth = "800";
+      showNav = true;
     }
     console.log(window.innerWidth);
 
-    this.setState({playerWidth: playerWidth});
+    this.setState({playerWidth: playerWidth, showNav: showNav});
   }
 
   render() {
@@ -238,7 +243,7 @@ class App extends React.Component {
           <div className="section-header" ref={sections[3]}>Photography</div>
           <div className="section-header" ref={sections[4]}>Interests</div>
         </div>
-        <div id="navbar">
+        {this.state.showNav ? <div id="navbar">
           <div className="navlink" onClick={() => scrollToDiv(this.state.home)}>Home</div>
           <div className="line"></div>
           <div className="navlink" onClick={() => scrollToDiv(sections[0])}>Professional</div>
@@ -250,7 +255,7 @@ class App extends React.Component {
           <div className="navlink" onClick={() => scrollToDiv(sections[3])}>Photography</div>
           <div className="line"></div>
           <div className="navlink" onClick={() => scrollToDiv(sections[4])}>Interests</div>
-        </div>
+        </div> : null}
       </div>
     );
   }
