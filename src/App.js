@@ -4,6 +4,8 @@ import TextLoop from "react-text-loop";
 import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot} from "@material-ui/lab";
 import Paper from '@material-ui/core/Paper';
 import Typography from "@material-ui/core/Typography";
+import Gallery from 'react-photo-gallery';
+import {getImages} from './images.js';
 
 import gh from './gh.svg';
 import li from './li.svg';
@@ -28,6 +30,71 @@ class App extends React.Component {
     window.onscroll = this.onScrollFromTop.bind(this);
     window.onresize = this.setContentWidth.bind(this);
 
+    let images = getImages();
+    let photos = [
+      {
+        src: images[0],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[1],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[2],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[3],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[4],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[5],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[6],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[7],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[8],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[9],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[12],
+        width: 0.75,
+        height: 0.5
+      },
+      {
+        src: images[13],
+        width: 0.75,
+        height: 0.5
+      }
+    ];
+
+
     let playerWidth = "400";
     let showNav = false;
     if (window.innerWidth > 800) {
@@ -39,7 +106,8 @@ class App extends React.Component {
       home: React.createRef(),
       toTop: null,
       playerWidth: playerWidth,
-      showNav: showNav
+      showNav: showNav,
+      photos: photos
     }
   }
 
@@ -266,6 +334,9 @@ class App extends React.Component {
             src="https://bit.ly/34dfBF4">
           </iframe>
           <div className="section-header" ref={sections[3]}>Photography</div>
+          <div id="gallery-container">
+          < Gallery photos={this.state.photos}/>
+          </div>
           <div className="section-header" ref={sections[4]}>Interests</div>
         </div>
         {this.state.showNav ? <div id="navbar">
