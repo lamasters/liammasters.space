@@ -68,6 +68,7 @@ class App extends React.Component {
           interval={1500}
         >
           <div className="subheader" onClick={() => scrollToDiv(sections[0])}>Software Engineer</div>
+          <div className="subheader" onClick={() => scrollToDiv(sections[0])}>Astrophysicist</div>
           <div className="subheader" onClick={() => scrollToDiv(sections[1])}>Maker</div>
           <div className="subheader" onClick={() => scrollToDiv(sections[2])}>Musician</div>
           <div className="subheader" onClick={() => scrollToDiv(sections[3])}>Photographer</div>
