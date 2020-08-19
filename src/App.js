@@ -238,6 +238,19 @@ class App extends React.Component {
           <div className="section-header" ref={sections[3]}>Photography</div>
           <div className="section-header" ref={sections[4]}>Interests</div>
         </div>
+        <div id="navbar">
+          <div className="navlink" onClick={() => scrollToDiv(this.state.home)}>Home</div>
+          <div className="line"></div>
+          <div className="navlink" onClick={() => scrollToDiv(sections[0])}>Professional</div>
+          <div className="line"></div>
+          <div className="navlink" onClick={() => scrollToDiv(sections[1])}>Projects</div>
+          <div className="line"></div>
+          <div className="navlink" onClick={() => scrollToDiv(sections[2])}>Music</div>
+          <div className="line"></div>
+          <div className="navlink" onClick={() => scrollToDiv(sections[3])}>Photography</div>
+          <div className="line"></div>
+          <div className="navlink" onClick={() => scrollToDiv(sections[4])}>Interests</div>
+        </div>
       </div>
     );
   }

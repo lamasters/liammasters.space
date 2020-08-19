@@ -4,6 +4,30 @@
   text-align: center;
 }
 
+#navbar {
+  position: fixed;
+  top: 50px;
+  left: 10px;
+}
+
+.navlink {
+  color: #aaa;
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 16px;
+  text-align: left;
+}
+
+.navlink:hover {
+  color: #444;
+  cursor: pointer;
+}
+
+.line {
+  height: 25px;
+  width: 1px;
+  background-color: #aaa;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   background: #000;
