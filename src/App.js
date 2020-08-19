@@ -12,6 +12,11 @@ import ss from './ss.png';
 import ec from './ec.jpg';
 import ntc from './ntc.ico';
 import volt from './volt.png';
+import ast from './assistant.gif';
+import clst from './Celesticom.gif';
+import orbt from './orbiter.gif';
+import trns from './translate.jpg';
+import dig from './digit.jpg';
 
 function scrollToDiv(divRef) {
   divRef.current.scrollIntoView({behavior: "smooth", block: "start"})
@@ -234,6 +239,26 @@ class App extends React.Component {
               </TimelineItem>
             </Timeline>
           <div className="section-header" ref={sections[1]}>Projects</div>
+            <div className="proj-container">
+              <div className="proj-title">Virtual Assistant</div>
+              <img src={ast} id="assistant-img"/>
+            </div>
+            <div className="proj-container">
+              <div className="proj-title">Messenger Translate Bot</div>
+              <img src={trns} id="translate-img"/>
+            </div>
+            <div className="proj-container">
+              <div className="proj-title">Mars Orbiter</div>
+              <img src={orbt} id="orbiter-img"/>
+            </div>
+            <div className="proj-container">
+              <div className="proj-title">Celesticom</div>
+              <img src={clst} id="celesticom-img"/>
+              </div>
+            <div className="proj-container">
+              <div className="proj-title">Messenger Digit Classifier</div>
+              <img src={dig} id="digit-img"/>
+            </div>
           <div className="section-header" ref={sections[2]}>Music</div>
           <iframe 
             width={this.state.playerWidth} height="400"

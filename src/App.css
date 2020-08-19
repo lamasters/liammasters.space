@@ -134,3 +134,18 @@
 .paper {
   width: 200px;
 }
+
+img {
+  width: 500px;
+}
+
+.proj-title {
+  font-family: 'Alata', sans-serif;
+  font-size: 36px;
+  color: #fff;
+}
+
+.proj-container {
+  width: 100%;
+  margin-bottom: 50px;
+}
