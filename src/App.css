@@ -28,11 +28,11 @@
 
 #to-top {
   position: fixed;
-  left: 10px;
-  top: 10px;
+  right: 10px;
+  bottom: 10px;
   font-family: 'Baloo Tamma 2', cursive;
   font-size: 24px;
-  color: #444;
+  color: #000;
   background-color: #aaa;
   width: 60px;
   height: 40px;
@@ -48,9 +48,10 @@
 
 .subheader {
   font-family: 'Baloo Tamma 2', cursive;
-  font-size: 48px;
+  font-size: 44px;
   color: #BBB;
   width: 100vw;
+  height: 100px;
   text-align: center;
 }
 
