@@ -96,8 +96,8 @@ class App extends React.Component {
         stars.splice(i, 1);
         x = Math.floor(Math.random() * width);
         y = Math.floor(Math.random() * height);
-        vx = (1 + Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 8;
-        vy = (1 + Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 8;
+        vx = ((1 + Math.random()) * dirs[Math.floor(Math.random() * dirs.length)]) / 4;
+        vy = ((1 + Math.random()) * dirs[Math.floor(Math.random() * dirs.length)]) / 4;
         size = Math.floor(1 + Math.random() * 3);
         opac = Math.random();
         stars.push({
