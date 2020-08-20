@@ -150,20 +150,34 @@ img {
   width: 500px;
 }
 
+.inline-link {
+  color: #fff;
+}
+
 .proj-title {
   font-family: 'Alata', sans-serif;
   font-size: 36px;
   color: #fff;
 }
 
-iframe {
+.proj-desc {
   position: relative;
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 18px;
+  color: #fff;
+  width: 50%;
+  margin: auto;
 }
 
 .proj-container {
   position: relative;
   width: 100%;
   margin-bottom: 50px;
+}
+
+
+iframe {
+  position: relative;
 }
 
 #gallery-container {

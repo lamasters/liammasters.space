@@ -331,22 +331,55 @@ class App extends React.Component {
             <div className="proj-container">
               <div className="proj-title">Virtual Assistant</div>
               <img src={ast} id="assistant-img"/>
+              <div className="proj-desc">
+                A virtual assistant with an emotional touch. 
+                This assistant is powered by a Raspberry Pi and an 
+                Arduino nano housed inside of a 3D printed body. 
+                Equipped with a custom version of Amazon Alexa software, 
+                it can express emotion with its digital eye based on voice prompts.
+              </div>
             </div>
             <div className="proj-container">
               <div className="proj-title">Messenger Translate Bot</div>
               <img src={trns} id="translate-img"/>
+              <div className="proj-desc">
+                A chat bot for Facebook Messenger written in Python 
+                using the Facebook Chat API. It can be added as a third party 
+                to any conversation. When a user enters the keyword before 
+                their message, the chat bot automatically translates it to 
+                the selected language and sends the message back.
+              </div>
             </div>
             <div className="proj-container">
               <div className="proj-title">Mars Orbiter</div>
               <img src={orbt} id="orbiter-img"/>
+              <div className="proj-desc">
+                A satellite launching simulator written in Java using a custom 
+                graphics library. It employs a machine learning genetic algorithm 
+                to find a stable orbit around Mars. 5000 starting orbits are 
+                launched and collapse to one final state. The fit of each orbit is 
+                determined by calculating average orbital distance and variance of 
+                orbital distance.
+              </div>
             </div>
             <div className="proj-container">
               <div className="proj-title">Celesticom</div>
               <img src={clst} id="celesticom-img"/>
+              <div className="proj-desc">
+                Celesticom is a concept for an interplanetary and interstellar satellite 
+                network. It operates similar to the SpaceX <a className="inline-link" target="_blank" href="https://www.starlink.com/">Starlink </a>
+                network but instead utilizes Lagrangian points and vast networks of inexpensive 
+                satellites to establish efficient communication over vast distances.
+              </div>
               </div>
             <div className="proj-container">
               <div className="proj-title">Messenger Digit Classifier</div>
-              <img src={dig} id="digit-img"/>
+              <img src={dig} id="digit-img"/>'
+              <div className="proj-desc">
+              A Facebook Messenger chat bot written in Python using Tensorflow and the 
+              Facebook Chat API. The bot can be sent images of handwritten digits and will 
+              send a message back with it's classification.
+              </div>
             </div>
           <div className="section-header" ref={sections[2]}>Music</div>
           <iframe 
