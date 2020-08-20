@@ -64,8 +64,8 @@ class App extends React.Component {
     for(let i = 0;  i < 100; i++) {
       x = Math.floor(Math.random() * width);
       y = Math.floor(Math.random() * height);
-      vx = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 10;
-      vy = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 10;
+      vx = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 8;
+      vy = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 8;
       size = Math.floor(1 + Math.random() * 5);
       opac = Math.random();
       stars.push({
@@ -96,8 +96,8 @@ class App extends React.Component {
         stars.splice(i, 1);
         x = Math.floor(Math.random() * width);
         y = Math.floor(Math.random() * height);
-        vx = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 10;
-        vy = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 10;
+        vx = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 8;
+        vy = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 8;
         size = Math.floor(1 + Math.random() * 5);
         opac = Math.random();
         stars.push({
