@@ -128,7 +128,7 @@
 .timeline-item {
   color: #fff;
   margin-bottom: 60px;
-  filter: drop-shadow(0px 0px 24px #000);
+  filter: drop-shadow(0px 0px 7px #000);
 }
 
 .timeline-icon {
