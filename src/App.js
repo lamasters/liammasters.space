@@ -92,7 +92,7 @@ class App extends React.Component {
 
     for(let i = 0; i < stars.length; i++) {
       star = stars[i]; 
-      if(star.x > width || star.x < 0 || star.y > height || star.y < 0) {
+      if(star.x > width || star.x + star.size < 0 || star.y > height || star.y + star.size < 0) {
         stars.splice(i, 1);
         x = Math.floor(Math.random() * width);
         y = Math.floor(Math.random() * height);
