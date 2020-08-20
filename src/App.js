@@ -4,7 +4,6 @@ import TextLoop from "react-text-loop";
 import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot} from "@material-ui/lab";
 import Paper from '@material-ui/core/Paper';
 import Typography from "@material-ui/core/Typography";
-import Gallery from 'react-photo-gallery';
 import {getImages} from './images.js';
 
 import gh from './gh.svg';
@@ -107,7 +106,7 @@ class App extends React.Component {
       toTop: null,
       playerWidth: playerWidth,
       showNav: showNav,
-      photos: photos
+      photos: images
     }
   }
 
@@ -150,7 +149,7 @@ class App extends React.Component {
           <div className="subheader" onClick={() => scrollToDiv(sections[1])}>Maker</div>
           <div className="subheader" onClick={() => scrollToDiv(sections[2])}>Musician</div>
           <div className="subheader" onClick={() => scrollToDiv(sections[3])}>Photographer</div>
-          <div className="subheader" onClick={() => scrollToDiv(sections[4])}>Podcast Aficianado</div>
+          <div className="subheader" onClick={() => scrollToDiv(sections[3])}>Podcast Aficianado</div>
         </TextLoop>
         <div id="social-links">
           <a className="icon-link" href="https://github.com/lamasters" target="_blank"><img src={gh} className="icon"/></a>
@@ -335,9 +334,9 @@ class App extends React.Component {
           </iframe>
           <div className="section-header" ref={sections[3]}>Photography</div>
           <div id="gallery-container">
-          < Gallery photos={this.state.photos}/>
+          {this.state.photos.map(photo => {return <img src={photo} id="gallery-photo"/>})}
           </div>
-          <div className="section-header" ref={sections[4]}>Interests</div>
+          {/*<div className="section-header" ref={sections[4]}>Interests</div>*/}
         </div>
         {this.state.showNav ? <div id="navbar">
           <div className="navlink" onClick={() => scrollToDiv(this.state.home)}>Home</div>
@@ -349,8 +348,8 @@ class App extends React.Component {
           <div className="navlink" onClick={() => scrollToDiv(sections[2])}>Music</div>
           <div className="line"></div>
           <div className="navlink" onClick={() => scrollToDiv(sections[3])}>Photography</div>
-          <div className="line"></div>
-          <div className="navlink" onClick={() => scrollToDiv(sections[4])}>Interests</div>
+          {/*<div className="line"></div>
+          <div className="navlink" onClick={() => scrollToDiv(sections[4])}>Interests</div>*/}
         </div> : null}
       </div>
     );

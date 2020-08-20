@@ -15,7 +15,6 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-photo-gallery": "^8.0.0",
     "react-scripts": "3.4.3",
     "react-text-loop": "^2.3.0",
     "react-vertical-timeline-component": "^3.0.2"
