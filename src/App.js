@@ -30,69 +30,6 @@ class App extends React.Component {
     window.onresize = this.setContentWidth.bind(this);
 
     let images = getImages();
-    let photos = [
-      {
-        src: images[0],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[1],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[2],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[3],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[4],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[5],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[6],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[7],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[8],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[9],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[12],
-        width: 0.75,
-        height: 0.5
-      },
-      {
-        src: images[13],
-        width: 0.75,
-        height: 0.5
-      }
-    ];
-
 
     let playerWidth = "400";
     let showNav = false;
@@ -101,13 +38,95 @@ class App extends React.Component {
       showNav = true;
     }
 
+    let initStarfield = this.initStarfield.bind(this);
+    let stars = initStarfield();
+
     this.state = {
       home: React.createRef(),
       toTop: null,
       playerWidth: playerWidth,
       showNav: showNav,
-      photos: images
+      photos: images,
+      stars: stars,
+      starDivs: []
+    };
+
+    this.renderStarfield(stars);
+  }
+
+  initStarfield() {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let stars = [];
+    let x, y, size, opac, vx, vy;
+    let dirs = [-1, 1];
+
+    for(let i = 0;  i < 100; i++) {
+      x = Math.floor(Math.random() * width);
+      y = Math.floor(Math.random() * height);
+      vx = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 2;
+      vy = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 2;
+      size = Math.floor(1 + Math.random() * 5);
+      opac = Math.random();
+      stars.push({
+        x: x,
+        y: y,
+        vx: vx,
+        vy: vy,
+        size: size,
+        opac: opac
+      });
     }
+
+    return stars;
+  }
+
+  renderStarfield(stars) {
+    let starDivs = [];
+    let starStyle;
+
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let x, y, vx, vy, size, opac, star;
+    let dirs = [-1, 1]
+
+    for(let i = 0; i < stars.length; i++) {
+      star = stars[i]; 
+      if(star.x > width || star.x < 0 || star.y > height || star.y < 0) {
+        stars.splice(i, 1);
+        x = Math.floor(Math.random() * width);
+        y = Math.floor(Math.random() * height);
+        vx = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 2;
+        vy = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 2;
+        size = Math.floor(1 + Math.random() * 5);
+        opac = Math.random();
+        stars.push({
+          x: x,
+          y: y,
+          vx: vx,
+          vy: vy,
+          size: size,
+          opac: opac
+        });
+      } else {
+        stars[i].x += stars[i].vx;
+        stars[i].y += stars[i].vy;
+      }
+
+      starStyle = {
+        left: String(star.x) + 'px',
+        top: String(star.y) + 'px',
+        width: String(star.size) + 'px',
+        height: String(star.size) + 'px',
+        borderRadius: '10px',
+        opacity: star.opac
+      }
+
+      starDivs.push(<div className="star" style={starStyle}></div>);
+    }
+    console.log("rendered stars");
+    this.setState({starDivs: starDivs})
+    setTimeout(() => this.renderStarfield(stars), 1);
   }
 
   onScrollFromTop() {
@@ -139,6 +158,9 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <div id="star-container">
+          {this.state.starDivs.map(star => star)}
+        </div>
         <div id="header" ref={this.state.home}>Liam Masters</div>
         {this.state.toTop}
         <TextLoop
