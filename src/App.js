@@ -61,7 +61,7 @@ class App extends React.Component {
     let x, y, size, opac, vx, vy;
     let dirs = [-1, 1];
 
-    for(let i = 0;  i < 100; i++) {
+    for(let i = 0;  i < 500; i++) {
       x = Math.floor(Math.random() * width);
       y = Math.floor(Math.random() * height);
       vx = (Math.random() * dirs[Math.floor(Math.random() * dirs.length)]) / 8;
