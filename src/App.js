@@ -33,13 +33,15 @@ class App extends React.Component {
 
     let playerWidth = "400";
     let showNav = false;
+    let numStars = 150;
     if (window.innerWidth > 800) {
       playerWidth = "800";
       showNav = true;
+      numStars = 500;
     }
 
     let initStarfield = this.initStarfield.bind(this);
-    let stars = initStarfield();
+    let stars = initStarfield(numStars);
 
     this.state = {
       home: React.createRef(),
@@ -48,20 +50,21 @@ class App extends React.Component {
       showNav: showNav,
       photos: images,
       stars: stars,
-      starDivs: []
+      starDivs: [],
+      numStars: numStars
     };
 
     this.renderStarfield(stars);
   }
 
-  initStarfield() {
+  initStarfield(numStars) {
     let width = window.innerWidth;
     let height = window.innerHeight;
     let stars = [];
     let x, y, size, opac, vx, vy;
     let dirs = [-1, 1];
 
-    for(let i = 0;  i < 500; i++) {
+    for(let i = 0;  i < numStars; i++) {
       x = Math.floor(Math.random() * width);
       y = Math.floor(Math.random() * height);
       vx = ((1 + Math.random()) * dirs[Math.floor(Math.random() * dirs.length)]) / 4;
