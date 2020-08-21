@@ -91,11 +91,6 @@
   text-align: center;
 }
 
-.subheader:hover {
-  cursor: pointer;
-  color: #888;
-}
-
 .icon-link {
   display: inline-block;
   width: 30px;

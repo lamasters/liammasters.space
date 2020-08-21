@@ -19,10 +19,6 @@ import orbt from './orbiter.gif';
 import trns from './translate.jpg';
 import dig from './digit.jpg';
 
-function scrollToDiv(divRef) {
-  divRef.current.scrollIntoView({behavior: "smooth", block: "start"})
-}
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -55,6 +51,10 @@ class App extends React.Component {
     };
 
     this.renderStarfield(stars);
+  }
+
+  scrollToDiv(divRef) {
+    divRef.current.scrollIntoView({behavior: "smooth", block: "start"});
   }
 
   initStarfield(numStars) {
@@ -135,7 +135,7 @@ class App extends React.Component {
   onScrollFromTop() {
     let toTop = null;
     if (window.scrollY > 250) {
-      toTop = (<div id="to-top" onClick={() => scrollToDiv(this.state.home)}>Top</div>);
+      toTop = (<div id="to-top" onClick={() => this.scrollToDiv(this.state.home)}>Top</div>);
     }
 
     this.setState({toTop: toTop});
@@ -169,12 +169,12 @@ class App extends React.Component {
         <TextLoop
           interval={1500}
         >
-          <div className="subheader" onClick={() => scrollToDiv(sections[0])}>Software Engineer</div>
-          <div className="subheader" onClick={() => scrollToDiv(sections[0])}>Astrophysicist</div>
-          <div className="subheader" onClick={() => scrollToDiv(sections[1])}>Maker</div>
-          <div className="subheader" onClick={() => scrollToDiv(sections[2])}>Musician</div>
-          <div className="subheader" onClick={() => scrollToDiv(sections[3])}>Photographer</div>
-          <div className="subheader" onClick={() => scrollToDiv(sections[3])}>Podcast Aficianado</div>
+          <div className="subheader">Software Engineer</div>
+          <div className="subheader">Astrophysicist</div>
+          <div className="subheader">Maker</div>
+          <div className="subheader">Musician</div>
+          <div className="subheader">Photographer</div>
+          <div className="subheader">Podcast Aficianado</div>
         </TextLoop>
         <div id="social-links">
           <a className="icon-link" href="https://github.com/lamasters" target="_blank"><img src={gh} className="icon"/></a>
@@ -198,7 +198,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <img className="timeline-icon" src={uw}/>
+                    <a href="https://uwaterloo.ca/science/" target="_blank"><img className="timeline-icon" src={uw}/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -219,7 +219,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                  <img className="timeline-icon" src={ss}/>
+                    <a href="https://uwaterloo.ca/science-society/" target="_blank"><img className="timeline-icon" src={ss}/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -240,7 +240,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                  <img className="timeline-icon round" src={ec}/>
+                    <a href="https://www.canada.ca/en/environment-climate-change.html" target="_blank"><img className="timeline-icon round" src={ec}/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -261,7 +261,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <img className="timeline-icon round" src={ntc}/>
+                    <a href="https://www.neptectechnologies.com/" target="_blank"><img className="timeline-icon round" src={ntc}/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -282,7 +282,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <img className="timeline-icon" src={volt}/>
+                    <a href="https://www.voltalabs.co" target="_blank"><img className="timeline-icon" src={volt}/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -303,7 +303,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <img className="timeline-icon" src={uw}/>
+                    <a href="https://uwaterloo.ca/science/" target="_blank"><img className="timeline-icon" src={uw}/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -324,7 +324,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <img className="timeline-icon" src={volt}/>
+                  < a href="https://www.voltalabs.co" target="_blank"><img className="timeline-icon" src={volt}/></a>
                   </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent className="timeline-item">
@@ -383,7 +383,7 @@ class App extends React.Component {
               <div className="proj-desc">
                 Celesticom is a concept for an interplanetary and interstellar satellite 
                 network. It operates similar to the SpaceX <a className="inline-link" target="_blank" href="https://www.starlink.com/">Starlink </a>
-                network but instead utilizes Lagrangian points and vast networks of inexpensive 
+                network but instead utilizes Lagrangian points and large networks of inexpensive 
                 satellites to establish efficient communication over vast distances.
               </div>
               </div>
@@ -398,7 +398,7 @@ class App extends React.Component {
             </div>
           <div className="section-header" ref={sections[2]}>Music</div>
           <div className="proj-desc">
-            Ever since I first learned to play guitar when I was a kid I've loved to play
+            Ever since I first learned to play guitar when I was a kid, I've loved to play
             and create music in my free time. A favorite pass-time of mine is to record 
             instrumental pieces with a MIDI keyboard in Logic Pro. Below are a few examples
             that I've created in the past few years.
@@ -411,7 +411,7 @@ class App extends React.Component {
           <div className="section-header" ref={sections[3]}>Photography</div>
           <div className="proj-desc">
             Another passion of mine is photography. I've always found it interesting to see 
-            how other people view the world and how their unique voice can be translated in the 
+            how other people view the world and how their unique voice can translate to the 
             images they capture. I mostly dabble in digital photography however I also have a
             keen affinity for the style and process of film photography. On top of all this, 
             the physicist in me is always excited to play with anything involving optics and 
@@ -424,15 +424,15 @@ class App extends React.Component {
         </div>
         <div id='footer'>Liam Masters • 2020</div>
         {this.state.showNav ? <div id="navbar">
-          <div className="navlink" onClick={() => scrollToDiv(this.state.home)}>Home</div>
+          <div className="navlink" onClick={() => this.scrollToDiv(this.state.home)}>Home</div>
           <div className="line"></div>
-          <div className="navlink" onClick={() => scrollToDiv(sections[0])}>Professional</div>
+          <div className="navlink" onClick={() => this.scrollToDiv(sections[0])}>Professional</div>
           <div className="line"></div>
-          <div className="navlink" onClick={() => scrollToDiv(sections[1])}>Projects</div>
+          <div className="navlink" onClick={() => this.scrollToDiv(sections[1])}>Projects</div>
           <div className="line"></div>
-          <div className="navlink" onClick={() => scrollToDiv(sections[2])}>Music</div>
+          <div className="navlink" onClick={() => this.scrollToDiv(sections[2])}>Music</div>
           <div className="line"></div>
-          <div className="navlink" onClick={() => scrollToDiv(sections[3])}>Photography</div>
+          <div className="navlink" onClick={() => this.scrollToDiv(sections[3])}>Photography</div>
           {/*<div className="line"></div>
           <div className="navlink" onClick={() => scrollToDiv(sections[4])}>Interests</div>*/}
         </div> : null}
