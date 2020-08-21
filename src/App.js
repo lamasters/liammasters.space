@@ -182,6 +182,13 @@ class App extends React.Component {
         </div>
         <div>
           <div className="section-header" ref={sections[0]}>Professional</div>
+          <div className="proj-desc">
+            As a scientist by training and an engineer by trade, I've had the fortunate 
+            experience of being exposed to many industries. I've gotten to work and 
+            learn in diverse environments with some amazing people. There's been some 
+            twists and turns on my path to where I am now but described here is a 
+            summary of some of the highlights along the way.
+          </div>
             <Timeline align="left">
               <TimelineItem>
                 <TimelineOppositeContent>
@@ -331,6 +338,11 @@ class App extends React.Component {
               </TimelineItem>
             </Timeline>
           <div className="section-header" ref={sections[1]}>Projects</div>
+          <div className="proj-desc">
+            It's a blessing and a curse that I am chronically bored (plane rides are tough). 
+            As a result, in my free time I'm constantly working on projects and creating 
+            things that I think are cool. Listed here are a few examples that I'm proud of.
+          </div>
             <div className="proj-container">
               <div className="proj-title">Virtual Assistant</div>
               <img src={ast} id="assistant-img"/>
@@ -385,17 +397,32 @@ class App extends React.Component {
               </div>
             </div>
           <div className="section-header" ref={sections[2]}>Music</div>
+          <div className="proj-desc">
+            Ever since I first learned to play guitar when I was a kid I've loved to play
+            and create music in my free time. A favorite pass-time of mine is to record 
+            instrumental pieces with a MIDI keyboard in Logic Pro. Below are a few examples
+            that I've created in the past few years.
+          </div>
           <iframe 
             width={this.state.playerWidth} height="400"
             scrolling="no" frameborder="no" allow="autoplay"
             src="https://bit.ly/34dfBF4">
           </iframe>
           <div className="section-header" ref={sections[3]}>Photography</div>
+          <div className="proj-desc">
+            Another passion of mine is photography. I've always found it interesting to see 
+            how other people view the world and how their unique voice can be translated in the 
+            images they capture. I mostly dabble in digital photography however I also have a
+            keen affinity for the style and process of film photography. On top of all this, 
+            the physicist in me is always excited to play with anything involving optics and 
+            capturing astronomical objects.
+          </div>
           <div id="gallery-container">
           {this.state.photos.map(photo => {return <img src={photo} id="gallery-photo"/>})}
           </div>
           {/*<div className="section-header" ref={sections[4]}>Interests</div>*/}
         </div>
+        <div id='footer'>Liam Masters • 2020</div>
         {this.state.showNav ? <div id="navbar">
           <div className="navlink" onClick={() => scrollToDiv(this.state.home)}>Home</div>
           <div className="line"></div>
