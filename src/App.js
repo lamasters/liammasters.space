@@ -33,7 +33,7 @@ class App extends React.Component {
     if (window.innerWidth > 800) {
       playerWidth = "800";
       showNav = true;
-      numStars = 300;
+      numStars = 200;
     }
 
     let initStarfield = this.initStarfield.bind(this);
@@ -69,7 +69,7 @@ class App extends React.Component {
       y = Math.floor(Math.random() * height);
       vx = ((1 + Math.random()) * dirs[Math.floor(Math.random() * dirs.length)]) / 4;
       vy = ((1 + Math.random()) * dirs[Math.floor(Math.random() * dirs.length)]) / 4;
-      size = Math.floor(2 + Math.random() * 5);
+      size = Math.floor(3 + Math.random() * 5);
       opac = Math.random();
       stars.push({
         x: x,
@@ -101,7 +101,7 @@ class App extends React.Component {
         y = Math.floor(Math.random() * height);
         vx = ((1 + Math.random()) * dirs[Math.floor(Math.random() * dirs.length)]) / 4;
         vy = ((1 + Math.random()) * dirs[Math.floor(Math.random() * dirs.length)]) / 4;
-        size = Math.floor(2 + Math.random() * 5);
+        size = Math.floor(3 + Math.random() * 5);
         opac = Math.random();
         stars.push({
           x: x,
