@@ -28,7 +28,7 @@ class App extends React.Component {
 
     let playerWidth = "400";
     let showNav = false;
-    let numStars = 150;
+    let numStars = 100;
     if (window.innerWidth > 800) {
       playerWidth = "800";
       showNav = true;
