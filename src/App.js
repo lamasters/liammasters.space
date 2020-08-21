@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import TextLoop from "react-text-loop";
 import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot} from "@material-ui/lab";
 import Paper from '@material-ui/core/Paper';
 import Typography from "@material-ui/core/Typography";
@@ -39,6 +38,15 @@ class App extends React.Component {
     let initStarfield = this.initStarfield.bind(this);
     let stars = initStarfield(numStars);
 
+    let titles = [
+      "Software Engineer",
+      "Astrophysicist",
+      "Maker",
+      "Musician",
+      "Photographer",
+      "Podcast Aficionado"
+    ];
+
     this.state = {
       home: React.createRef(),
       toTop: null,
@@ -47,10 +55,22 @@ class App extends React.Component {
       photos: images,
       stars: stars,
       starDivs: [],
-      numStars: numStars
+      numStars: numStars,
+      title: "Software Engineer",
+      titles: titles
     };
 
     this.renderStarfield(stars);
+    this.changeTitle(0, titles);
+  }
+
+  changeTitle(n, titles) {
+    n++;
+    if (n >= titles.length) {
+      n = 0;
+    }
+    this.setState({title: titles[n]});
+    setTimeout(() => this.changeTitle(n, titles), 1000);
   }
 
   scrollToDiv(divRef) {
@@ -127,7 +147,7 @@ class App extends React.Component {
 
       starDivs.push(<div className="star" style={starStyle}></div>);
     }
-    console.log("rendered stars");
+
     this.setState({starDivs: starDivs})
     setTimeout(() => this.renderStarfield(stars), 1);
   }
@@ -166,16 +186,7 @@ class App extends React.Component {
         </div>
         <div id="header" ref={this.state.home}>Liam Masters</div>
         {this.state.toTop}
-        <TextLoop
-          interval={1500}
-        >
-          <div className="subheader">Software Engineer</div>
-          <div className="subheader">Astrophysicist</div>
-          <div className="subheader">Maker</div>
-          <div className="subheader">Musician</div>
-          <div className="subheader">Photographer</div>
-          <div className="subheader">Podcast Aficianado</div>
-        </TextLoop>
+        <div class="subheader">{this.state.title}</div>
         <div id="social-links">
           <a className="icon-link" href="https://github.com/lamasters" target="_blank"><img src={gh} className="icon"/></a>
           <a className="icon-link" href="https://linkedin.com/in/liam-a-masters" target="_blank"><img src={li} className="icon"/></a>
