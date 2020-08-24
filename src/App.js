@@ -185,7 +185,6 @@ class App extends React.Component {
           {this.state.starDivs.map(star => star)}
         </div>
         <div id="header" ref={this.state.home}>Liam Masters</div>
-        {this.state.toTop}
         <div class="subheader">{this.state.title}</div>
         <div id="social-links">
           <a className="icon-link" href="https://github.com/lamasters" target="_blank"><img src={gh} className="icon"/></a>
@@ -434,6 +433,7 @@ class App extends React.Component {
           {/*<div className="section-header" ref={sections[4]}>Interests</div>*/}
         </div>
         <div id='footer'>Liam Masters • 2020</div>
+        {this.state.toTop}
         {this.state.showNav ? <div id="navbar">
           <div className="navlink" onClick={() => this.scrollToDiv(this.state.home)}>Home</div>
           <div className="line"></div>
