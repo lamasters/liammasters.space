@@ -149,7 +149,7 @@ class App extends React.Component {
     }
 
     this.setState({starDivs: starDivs})
-    setTimeout(() => this.renderStarfield(stars), 1);
+    //setTimeout(() => this.renderStarfield(stars), 1);
   }
 
   onScrollFromTop() {
