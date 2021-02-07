@@ -32,7 +32,7 @@ class App extends React.Component {
     if (window.innerWidth > 800) {
       playerWidth = "800";
       showNav = true;
-      numStars = 200;
+      numStars = 50;
     }
 
     let initStarfield = this.initStarfield.bind(this);
@@ -149,7 +149,7 @@ class App extends React.Component {
     }
 
     this.setState({starDivs: starDivs})
-    //setTimeout(() => this.renderStarfield(stars), 1);
+    setTimeout(() => this.renderStarfield(stars), 20);
   }
 
   onScrollFromTop() {
