@@ -413,10 +413,15 @@ class App extends React.Component {
             instrumental pieces with a MIDI keyboard in Logic Pro. Below are a few examples
             that I've created in the past few years.
           </div>
-          <iframe 
-            width={this.state.playerWidth} height="400"
-            scrolling="no" frameborder="no" allow="autoplay"
-            src="https://bit.ly/34dfBF4">
+          {/*<iframe 
+              width={this.state.playerWidth} height="400"
+              scrolling="no" frameborder="no" allow="autoplay"
+              src="https://bit.ly/34dfBF4">
+          </iframe>*/}
+          <iframe src="https://open.spotify.com/embed/album/0ZMsEEgYRsYuvIzPCFuw8C" 
+            width={this.state.playerWidth} height="300" 
+            frameborder="0" allowtransparency="true" 
+            allow="encrypted-media">
           </iframe>
           <div className="section-header" ref={sections[3]}>Photography</div>
           <div className="proj-desc">
