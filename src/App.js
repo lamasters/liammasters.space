@@ -32,7 +32,7 @@ class App extends React.Component {
     if (window.innerWidth > 800) {
       playerWidth = "800";
       showNav = true;
-      numStars = 200;
+      numStars = 100;
     }
 
     let initStarfield = this.initStarfield.bind(this);
