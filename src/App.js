@@ -28,11 +28,11 @@ class App extends React.Component {
 
     let playerWidth = "400";
     let showNav = false;
-    let numStars = 100;
+    let numStars = 30;
     if (window.innerWidth > 800) {
       playerWidth = "800";
       showNav = true;
-      numStars = 100;
+      numStars = 50;
     }
 
     let initStarfield = this.initStarfield.bind(this);
@@ -149,7 +149,7 @@ class App extends React.Component {
     }
 
     this.setState({starDivs: starDivs})
-    setTimeout(() => this.renderStarfield(stars), 1);
+    setTimeout(() => this.renderStarfield(stars), 20);
   }
 
   onScrollFromTop() {
@@ -185,7 +185,6 @@ class App extends React.Component {
           {this.state.starDivs.map(star => star)}
         </div>
         <div id="header" ref={this.state.home}>Liam Masters</div>
-        {this.state.toTop}
         <div class="subheader">{this.state.title}</div>
         <div id="social-links">
           <a className="icon-link" href="https://github.com/lamasters" target="_blank"><img src={gh} className="icon"/></a>
@@ -414,10 +413,15 @@ class App extends React.Component {
             instrumental pieces with a MIDI keyboard in Logic Pro. Below are a few examples
             that I've created in the past few years.
           </div>
-          <iframe 
-            width={this.state.playerWidth} height="400"
-            scrolling="no" frameborder="no" allow="autoplay"
-            src="https://bit.ly/34dfBF4">
+          {/*<iframe 
+              width={this.state.playerWidth} height="400"
+              scrolling="no" frameborder="no" allow="autoplay"
+              src="https://bit.ly/34dfBF4">
+          </iframe>*/}
+          <iframe src="https://open.spotify.com/embed/album/0ZMsEEgYRsYuvIzPCFuw8C" 
+            width={this.state.playerWidth} height="300" 
+            frameborder="0" allowtransparency="true" 
+            allow="encrypted-media">
           </iframe>
           <div className="section-header" ref={sections[3]}>Photography</div>
           <div className="proj-desc">
@@ -434,6 +438,7 @@ class App extends React.Component {
           {/*<div className="section-header" ref={sections[4]}>Interests</div>*/}
         </div>
         <div id='footer'>Liam Masters • 2020</div>
+        {this.state.toTop}
         {this.state.showNav ? <div id="navbar">
           <div className="navlink" onClick={() => this.scrollToDiv(this.state.home)}>Home</div>
           <div className="line"></div>
