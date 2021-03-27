@@ -91,6 +91,11 @@
   text-align: center;
 }
 
+#social-links {
+  width: 100vw;
+  height: 100px;
+}
+
 .icon-link {
   display: inline-block;
   width: 30px;
