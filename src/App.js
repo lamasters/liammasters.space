@@ -185,8 +185,8 @@ class App extends React.Component {
           {this.state.starDivs.map(star => star)}
         </div>
         <div id="header" ref={this.state.home}>Liam Masters</div>
-        <div class="subheader">{this.state.title}</div>
-        <div id="social-links">
+        <div className="subheader">{this.state.title}</div>
+        <div className="social-links">
           <a className="icon-link" href="https://github.com/lamasters" target="_blank"><img src={gh} className="icon"/></a>
           <a className="icon-link" href="https://linkedin.com/in/liam-a-masters" target="_blank"><img src={li} className="icon"/></a>
         </div>
