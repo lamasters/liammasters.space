@@ -292,7 +292,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <a href="https://www.voltalabs.co" target="_blank"><img className="timeline-icon" src={volt}/></a>
+                    <a href="https://www.voltalabs.com" target="_blank"><img className="timeline-icon" src={volt}/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -334,7 +334,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                  < a href="https://www.voltalabs.co" target="_blank"><img className="timeline-icon" src={volt}/></a>
+                  < a href="https://www.voltalabs.com" target="_blank"><img className="timeline-icon" src={volt}/></a>
                   </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent className="timeline-item">
