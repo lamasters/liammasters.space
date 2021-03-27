@@ -437,7 +437,7 @@ class App extends React.Component {
           </div>
           {/*<div className="section-header" ref={sections[4]}>Interests</div>*/}
         </div>
-        <div id='footer'>Liam Masters • 2020</div>
+        <div id='footer'>Liam Masters • 2021</div>
         {this.state.toTop}
         {this.state.showNav ? <div id="navbar">
           <div className="navlink" onClick={() => this.scrollToDiv(this.state.home)}>Home</div>
