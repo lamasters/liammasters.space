@@ -18,9 +18,9 @@
     "react-vertical-timeline-component": "^3.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "npm start",
+    "build": "npm run build",
+    "test": "npm run test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
