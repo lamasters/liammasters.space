@@ -329,7 +329,7 @@ class App extends React.Component {
               <TimelineItem>
                 <TimelineOppositeContent>
                   <Typography variant="body2" className="timeframe">
-                    Jan 2019 - Present
+                    Jan 2020 - Present
                   </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
