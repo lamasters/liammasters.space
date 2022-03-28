@@ -365,17 +365,6 @@ class App extends React.Component {
               </div>
             </div>
             <div className="proj-container">
-              <div className="proj-title">Messenger Translate Bot</div>
-              <img src={trns} id="translate-img"/>
-              <div className="proj-desc">
-                A chat bot for Facebook Messenger written in Python 
-                using the Facebook Chat API. It can be added as a third party 
-                to any conversation. When a user enters the keyword before 
-                their message, the chat bot automatically translates it to 
-                the selected language and sends the message back.
-              </div>
-            </div>
-            <div className="proj-container">
               <div className="proj-title">Mars Orbiter</div>
               <img src={orbt} id="orbiter-img"/>
               <div className="proj-desc">
@@ -395,15 +384,6 @@ class App extends React.Component {
                 network. It operates similar to the SpaceX <a className="inline-link" target="_blank" href="https://www.starlink.com/">Starlink </a>
                 network but instead utilizes Lagrangian points and large networks of inexpensive 
                 satellites to establish efficient communication over vast distances.
-              </div>
-              </div>
-            <div className="proj-container">
-              <div className="proj-title">Messenger Digit Classifier</div>
-              <img src={dig} id="digit-img"/>'
-              <div className="proj-desc">
-              A Facebook Messenger chat bot written in Python using Tensorflow and the 
-              Facebook Chat API. The bot can be sent images of handwritten digits and will 
-              send a message back with it's classification.
               </div>
             </div>
           <div className="section-header" ref={sections[2]}>Music</div>
