@@ -355,7 +355,7 @@ class App extends React.Component {
           </div>
             <div className="proj-container">
               <div className="proj-title">Virtual Assistant</div>
-              <img src={ast} id="assistant-img"/>
+              <img src={ast} id="assistant-img" loading="lazy"/>
               <div className="proj-desc">
                 A virtual assistant with an emotional touch. 
                 This assistant is powered by a Raspberry Pi and an 
@@ -366,7 +366,7 @@ class App extends React.Component {
             </div>
             <div className="proj-container">
               <div className="proj-title">Mars Orbiter</div>
-              <img src={orbt} id="orbiter-img"/>
+              <img src={orbt} id="orbiter-img" loading="lazy"/>
               <div className="proj-desc">
                 A satellite launching simulator written in Java using a custom 
                 graphics library. It employs a machine learning genetic algorithm 
@@ -378,7 +378,7 @@ class App extends React.Component {
             </div>
             <div className="proj-container">
               <div className="proj-title">Celesticom</div>
-              <img src={clst} id="celesticom-img"/>
+              <img src={clst} id="celesticom-img" loading="lazy"/>
               <div className="proj-desc">
                 Celesticom is a concept for an interplanetary and interstellar satellite 
                 network. It operates similar to the SpaceX <a className="inline-link" target="_blank" href="https://www.starlink.com/">Starlink </a>
@@ -413,7 +413,7 @@ class App extends React.Component {
             capturing astronomical objects.
           </div>
           <div id="gallery-container">
-          {this.state.photos.map(photo => {return <img src={photo} id="gallery-photo"/>})}
+          {this.state.photos.map(photo => {return <img src={photo} id="gallery-photo" loading="lazy"/>})}
           </div>
           {/*<div className="section-header" ref={sections[4]}>Interests</div>*/}
         </div>
