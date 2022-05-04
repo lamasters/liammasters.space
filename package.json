@@ -15,7 +15,7 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^5.0.1",
     "react-vertical-timeline-component": "^3.0.2"
   },
   "scripts": {
