@@ -352,7 +352,7 @@ class App extends React.Component {
             things that I think are cool. Listed here are a few examples that I'm proud of.
           </div>
             <div className="proj-container">
-              <div className="proj-title">Termcast</div>
+              <div className="proj-title">TermCast</div>
               <img src={term} id="termcast-img" loading="lazy"/>
               <div className="proj-desc">
                 A terminal-based podcast player. As someone who is
