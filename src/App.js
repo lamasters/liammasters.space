@@ -346,11 +346,6 @@ class App extends React.Component {
               </TimelineItem>
             </Timeline>
           <div className="section-header" ref={sections[1]}>Projects</div>
-          <div className="proj-desc">
-            It's a blessing and a curse that I am chronically bored (plane rides are tough). 
-            As a result, in my free time I'm constantly working on projects and creating 
-            things that I think are cool. Listed here are a few examples that I'm proud of.
-          </div>
             <div className="proj-container">
               <div className="proj-title">TermCast</div>
               <img src={term} id="termcast-img" loading="lazy"/>
