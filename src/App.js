@@ -12,9 +12,9 @@ import ss from './ss.png';
 import ec from './ec.jpg';
 import ntc from './ntc.ico';
 import volt from './volt.png';
+import term from './term.png';
 import ast from './assistant.gif';
 import clst from './Celesticom.gif';
-import orbt from './orbiter.gif';
 import trns from './translate.jpg';
 import dig from './digit.jpg';
 
@@ -39,12 +39,10 @@ class App extends React.Component {
     let stars = initStarfield(numStars);
 
     let titles = [
-      "Software Engineer",
-      "Astrophysicist",
-      "Maker",
-      "Musician",
-      "Photographer",
-      "Podcast Aficionado"
+      "Software",
+      "Astronomy",
+      "Music",
+      "Photography",
     ];
 
     this.state = {
@@ -56,7 +54,7 @@ class App extends React.Component {
       stars: stars,
       starDivs: [],
       numStars: numStars,
-      title: "Software Engineer",
+      title: "Software",
       titles: titles
     };
 
@@ -354,6 +352,18 @@ class App extends React.Component {
             things that I think are cool. Listed here are a few examples that I'm proud of.
           </div>
             <div className="proj-container">
+              <div className="proj-title">Termcast</div>
+              <img src={term} id="termcast-img" loading="lazy"/>
+              <div className="proj-desc">
+                A terminal-based podcast player. As someone who is
+                always working in a terminal, I love having ways to
+                streamline my workflow without having to leave my
+                session (or keyboard). This player is based on RSS
+                feeds, syncing listen time and show lists locally,
+                or across devices using Github as a CDN.
+              </div>
+            </div>
+            <div className="proj-container">
               <div className="proj-title">Virtual Assistant</div>
               <img src={ast} id="assistant-img" loading="lazy"/>
               <div className="proj-desc">
@@ -362,18 +372,6 @@ class App extends React.Component {
                 Arduino nano housed inside of a 3D printed body. 
                 Equipped with a custom version of Amazon Alexa software, 
                 it can express emotion with its digital eye based on voice prompts.
-              </div>
-            </div>
-            <div className="proj-container">
-              <div className="proj-title">Mars Orbiter</div>
-              <img src={orbt} id="orbiter-img" loading="lazy"/>
-              <div className="proj-desc">
-                A satellite launching simulator written in Java using a custom 
-                graphics library. It employs a machine learning genetic algorithm 
-                to find a stable orbit around Mars. 5000 starting orbits are 
-                launched and collapse to one final state. The fit of each orbit is 
-                determined by calculating average orbital distance and variance of 
-                orbital distance.
               </div>
             </div>
             <div className="proj-container">
@@ -386,31 +384,12 @@ class App extends React.Component {
                 satellites to establish efficient communication over vast distances.
               </div>
             </div>
-          <div className="section-header" ref={sections[2]}>Music</div>
-          <div className="proj-desc">
-            Ever since I first learned to play guitar when I was a kid, I've loved to play
-            and create music in my free time. A favorite pass-time of mine is to record 
-            instrumental pieces with a MIDI keyboard in Logic Pro. Below are a few examples
-            that I've created in the past few years.
-          </div>
-          {/*<iframe 
-              width={this.state.playerWidth} height="400"
-              scrolling="no" frameborder="no" allow="autoplay"
-              src="https://bit.ly/34dfBF4">
-          </iframe>*/}
-          <iframe src="https://open.spotify.com/embed/album/0ZMsEEgYRsYuvIzPCFuw8C" 
-            width={this.state.playerWidth} height="300" 
-            frameborder="0" allowtransparency="true" 
-            allow="encrypted-media">
-          </iframe>
           <div className="section-header" ref={sections[3]}>Photography</div>
           <div className="proj-desc">
-            Another passion of mine is photography. I've always found it interesting to see 
-            how other people view the world and how their unique voice can translate to the 
-            images they capture. I mostly dabble in digital photography however I also have a
-            keen affinity for the style and process of film photography. On top of all this, 
-            the physicist in me is always excited to play with anything involving optics and 
-            capturing astronomical objects.
+            Photography has long been a passion of mine. Whether it be capturing
+            nature on digital, city scapes on 35mm film, or long exposure shots
+            of the night sky, I find the memories and experiences it creates
+            immensely rewarding.
           </div>
           <div id="gallery-container">
           {this.state.photos.map(photo => {return <img src={photo} id="gallery-photo" loading="lazy"/>})}
@@ -425,8 +404,6 @@ class App extends React.Component {
           <div className="navlink" onClick={() => this.scrollToDiv(sections[0])}>Professional</div>
           <div className="line"></div>
           <div className="navlink" onClick={() => this.scrollToDiv(sections[1])}>Projects</div>
-          <div className="line"></div>
-          <div className="navlink" onClick={() => this.scrollToDiv(sections[2])}>Music</div>
           <div className="line"></div>
           <div className="navlink" onClick={() => this.scrollToDiv(sections[3])}>Photography</div>
           {/*<div className="line"></div>
