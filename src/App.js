@@ -355,7 +355,7 @@ class App extends React.Component {
                 streamline my workflow without having to leave my
                 session (or keyboard). This player is based on RSS
                 feeds, syncing listen time and show lists locally,
-                or across devices using Github as a CDN.
+                or across devices using Github as a CMS.
               </div>
             </div>
             <div className="proj-container">
