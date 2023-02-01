@@ -3,20 +3,6 @@ import './App.css';
 import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot} from "@material-ui/lab";
 import Paper from '@material-ui/core/Paper';
 import Typography from "@material-ui/core/Typography";
-import {getImages} from './images.js';
-
-import gh from './gh.svg';
-import li from './li.svg';
-import uw from './uw.svg';
-import ss from './ss.png';
-import ec from './ec.jpg';
-import ntc from './ntc.ico';
-import volt from './volt.png';
-import term from './term.png';
-import ast from './assistant.gif';
-import clst from './Celesticom.gif';
-import trns from './translate.jpg';
-import dig from './digit.jpg';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +10,10 @@ class App extends React.Component {
     window.onscroll = this.onScrollFromTop.bind(this);
     window.onresize = this.setContentWidth.bind(this);
 
-    let images = getImages();
+    let images = [];
+    for (let i = 1; i <= 15; i++) {
+        images.push(`https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/photos/p${i}.jpg`);
+    }
 
     let playerWidth = "400";
     let showNav = false;
@@ -185,8 +174,8 @@ class App extends React.Component {
         <div id="header" ref={this.state.home}>Liam Masters</div>
         <div className="subheader">{this.state.title}</div>
         <div>
-          <a className="icon-link" href="https://github.com/lamasters" target="_blank"><img src={gh} className="icon"/></a>
-          <a className="icon-link" href="https://linkedin.com/in/liam-a-masters" target="_blank"><img src={li} className="icon"/></a>
+          <a className="icon-link" href="https://github.com/lamasters" target="_blank"><img src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/gh.svg" className="icon"/></a>
+          <a className="icon-link" href="https://linkedin.com/in/liam-a-masters" target="_blank"><img src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/li.svg" className="icon"/></a>
         </div>
         <div>
           <div className="section-header" ref={sections[0]}>Professional</div>
@@ -206,7 +195,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <a href="https://uwaterloo.ca/science/" target="_blank"><img className="timeline-icon" src={uw}/></a>
+                    <a href="https://uwaterloo.ca/science/" target="_blank"><img className="timeline-icon" src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/uw.svg"/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -227,7 +216,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <a href="https://uwaterloo.ca/science-society/" target="_blank"><img className="timeline-icon" src={ss}/></a>
+                    <a href="https://uwaterloo.ca/science-society/" target="_blank"><img className="timeline-icon" src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/ss.png"/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -248,7 +237,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <a href="https://www.canada.ca/en/environment-climate-change.html" target="_blank"><img className="timeline-icon round" src={ec}/></a>
+                    <a href="https://www.canada.ca/en/environment-climate-change.html" target="_blank"><img className="timeline-icon round" src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/ec.jpg"/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -269,7 +258,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <a href="https://www.neptectechnologies.com/" target="_blank"><img className="timeline-icon round" src={ntc}/></a>
+                    <a href="https://www.neptectechnologies.com/" target="_blank"><img className="timeline-icon round" src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/ntc.ico"/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -290,7 +279,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <a href="https://www.voltalabs.com" target="_blank"><img className="timeline-icon" src={volt}/></a>
+                    <a href="https://www.voltalabs.com" target="_blank"><img className="timeline-icon" src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/volt.png"/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -311,7 +300,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                    <a href="https://uwaterloo.ca/science/" target="_blank"><img className="timeline-icon" src={uw}/></a>
+                    <a href="https://uwaterloo.ca/science/" target="_blank"><img className="timeline-icon" src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/uw.svg"/></a>
                   </TimelineDot>
                   <TimelineConnector />
                 </TimelineSeparator>
@@ -332,7 +321,7 @@ class App extends React.Component {
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                   <TimelineDot>
-                  < a href="https://www.voltalabs.com" target="_blank"><img className="timeline-icon" src={volt}/></a>
+                  < a href="https://www.voltalabs.com" target="_blank"><img className="timeline-icon" src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/volt.png"/></a>
                   </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent className="timeline-item">
@@ -348,7 +337,7 @@ class App extends React.Component {
           <div className="section-header" ref={sections[1]}>Projects</div>
             <div className="proj-container">
               <div className="proj-title">TermCast</div>
-              <img src={term} id="termcast-img" loading="lazy"/>
+              <img src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/term.png" id="termcast-img" loading="lazy"/>
               <div className="proj-desc">
                 A terminal-based podcast player. As someone who is
                 always working in a terminal, I love having ways to
@@ -360,7 +349,7 @@ class App extends React.Component {
             </div>
             <div className="proj-container">
               <div className="proj-title">Virtual Assistant</div>
-              <img src={ast} id="assistant-img" loading="lazy"/>
+              <img src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/assistant.gif" id="assistant-img" loading="lazy"/>
               <div className="proj-desc">
                 A virtual assistant with an emotional touch. 
                 This assistant is powered by a Raspberry Pi and an 
@@ -371,7 +360,7 @@ class App extends React.Component {
             </div>
             <div className="proj-container">
               <div className="proj-title">Celesticom</div>
-              <img src={clst} id="celesticom-img" loading="lazy"/>
+              <img src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/Celesticom.gif" id="celesticom-img" loading="lazy"/>
               <div className="proj-desc">
                 Celesticom is a concept for an interplanetary and interstellar satellite 
                 network. It operates similar to the SpaceX <a className="inline-link" target="_blank" href="https://www.starlink.com/">Starlink </a>
