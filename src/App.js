@@ -336,6 +336,20 @@ class App extends React.Component {
             </Timeline>
           <div className="section-header" ref={sections[1]}>Projects</div>
             <div className="proj-container">
+              <div className="proj-title">SimpliFeed</div>
+              <img src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/simplifeed.png" id="termcast-img" loading="lazy"/>
+              <div className="proj-desc">
+                A web application for subscribing to RSS news feeds.
+                I never found a news app that I liked, and other
+                RSS readers limit the user or just display the
+                news websites. I wanted a way to subscribe to the
+                news feeds that I care about, without having to sift
+                through all of the ads and distractions. This app
+                is built with Next.js and uses 
+                <a href="https://appwrite.io">appwrite</a> as a backend.
+              </div>
+            </div>
+            <div className="proj-container">
               <div className="proj-title">TermCast</div>
               <img src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/term.png" id="termcast-img" loading="lazy"/>
               <div className="proj-desc">
