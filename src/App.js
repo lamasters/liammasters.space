@@ -436,7 +436,7 @@ class App extends React.Component {
               just display the news websites. I wanted a way to subscribe to the
               news feeds that I care about, without having to sift through all
               of the ads and distractions. This app is built with Next.js and
-              uses <a href="https://appwrite.io">appwrite</a> as a backend.
+              uses Appwrite as a backend.
             </div>
           </div>
           <div className="proj-container">
