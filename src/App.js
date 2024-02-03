@@ -1,15 +1,17 @@
-import React from "react";
 import "./App.css";
+
 import {
   Timeline,
-  TimelineItem,
-  TimelineSeparator,
   TimelineConnector,
   TimelineContent,
-  TimelineOppositeContent,
   TimelineDot,
+  TimelineItem,
+  TimelineOppositeContent,
+  TimelineSeparator,
 } from "@material-ui/lab";
+
 import Paper from "@material-ui/core/Paper";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
 
 class App extends React.Component {
@@ -224,204 +226,60 @@ class App extends React.Component {
             Professional
           </div>
           <div className="proj-desc">
-            As a scientist by training and an engineer by trade, I've had the
-            fortunate experience of being exposed to many industries. I've
-            gotten to work and learn in diverse environments with some amazing
-            people. There's been some twists and turns on my path to where I am
-            now but described here is a summary of some of the highlights along
-            the way.
+            With an education in physics and a career in software engineering,
+            I've had the privelege of working on a variety of projects. I've
+            worked on everything from web applications to embedded systems, and
+            I'm always looking for new opportunities to learn and grow. I've
+            spent the last 5 years working in biotech, previously at Volta Labs
+            where I was building an instrument for automating genomic sequencing
+            sample prep. I'm currently at Insitro, where I work on the lab data
+            platform behind their target and drug discovery efforts.
           </div>
-          <Timeline align="left">
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography variant="body2" className="timeframe">
-                  Sep 2016 - Dec 2019
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot>
-                  <a href="https://uwaterloo.ca/science/" target="_blank">
-                    <img
-                      className="timeline-icon"
-                      src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/uw.svg"
-                    />
-                  </a>
-                </TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent className="timeline-item">
-                <Paper elevation={3} className="paper">
-                  <Typography variant="h6" component="h1">
-                    Began BSc Physics and Astronomy
-                  </Typography>
-                  <Typography>University of Waterloo</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography variant="body2" className="timeframe">
-                  Sep 2017 - Dec 2019
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot>
-                  <a
-                    href="https://uwaterloo.ca/science-society/"
-                    target="_blank"
-                  >
-                    <img
-                      className="timeline-icon"
-                      src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/ss.png"
-                    />
-                  </a>
-                </TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent className="timeline-item">
-                <Paper elevation={3} className="paper">
-                  <Typography variant="h6" component="h1">
-                    Media Coordinator
-                  </Typography>
-                  <Typography>UW Science Society</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography variant="body2" className="timeframe">
-                  Jan 2018 - Apr 2018
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot>
-                  <a
-                    href="https://www.canada.ca/en/environment-climate-change.html"
-                    target="_blank"
-                  >
-                    <img
-                      className="timeline-icon round"
-                      src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/ec.jpg"
-                    />
-                  </a>
-                </TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent className="timeline-item">
-                <Paper elevation={3} className="paper">
-                  <Typography variant="h6" component="h1">
-                    Modelling Technician
-                  </Typography>
-                  <Typography>Environment and Climate Change Canada</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography variant="body2" className="timeframe">
-                  Sep 2018 - Apr 2019
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot>
-                  <a href="https://www.neptectechnologies.com/" target="_blank">
-                    <img
-                      className="timeline-icon round"
-                      src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/ntc.ico"
-                    />
-                  </a>
-                </TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent className="timeline-item">
-                <Paper elevation={3} className="paper">
-                  <Typography variant="h6" component="h1">
-                    Software Co-op
-                  </Typography>
-                  <Typography>Neptec Technologies</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography variant="body2" className="timeframe">
-                  Sep 2019 - Dec 2019
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot>
-                  <a href="https://www.voltalabs.com" target="_blank">
-                    <img
-                      className="timeline-icon"
-                      src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/volt.png"
-                    />
-                  </a>
-                </TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent className="timeline-item">
-                <Paper elevation={3} className="paper">
-                  <Typography variant="h6" component="h1">
-                    Software Intern
-                  </Typography>
-                  <Typography>Volta Labs, Inc.</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography variant="body2" className="timeframe">
-                  Apr 2020
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot>
-                  <a href="https://uwaterloo.ca/science/" target="_blank">
-                    <img
-                      className="timeline-icon"
-                      src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/uw.svg"
-                    />
-                  </a>
-                </TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent className="timeline-item">
-                <Paper elevation={3} className="paper">
-                  <Typography variant="h6" component="h1">
-                    Graduated BSc General Science, Astrophysics Minor
-                  </Typography>
-                  <Typography>University of Waterloo</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography variant="body2" className="timeframe">
-                  Jan 2020 - Present
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot>
-                  <a href="https://www.voltalabs.com" target="_blank">
-                    <img
-                      className="timeline-icon"
-                      src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/volt.png"
-                    />
-                  </a>
-                </TimelineDot>
-              </TimelineSeparator>
-              <TimelineContent className="timeline-item">
-                <Paper elevation={3} className="paper">
-                  <Typography variant="h6" component="h1">
-                    Software Engineer
-                  </Typography>
-                  <Typography>Volta Labs, Inc.</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-          </Timeline>
           <div className="section-header" ref={sections[1]}>
             Projects
+          </div>
+          <div className="proj-container">
+            <div className="proj-title">Bonjour Bites</div>
+            <img
+              src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/bonjour.png"
+              id="bonjjour-img"
+              loading="lazy"
+            />
+            <div className="proj-desc">
+              I love the convenience of meal delivery services, but hate the
+              price tag that comes along with them. Bonjour Bites aims to
+              provide the convenience of simple meals, with a planned weekly
+              menu without the cost of grocery delivery. Each week, a menu is
+              generated with the option to swap out meals. A shopping list is
+              then generated based on the meals selected, with full cooking
+              instructions available. Users can also search the database of
+              recipes if they have something specific in mind.
+            </div>
+          </div>
+          <div className="proj-container">
+            <div className="proj-title">Entangled Tabs</div>
+            <img
+              src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/entangled.png"
+              id="entangled-img"
+              loading="lazy"
+            />
+            <div className="proj-desc">
+              Entangled is a tab synchronization extension for chromium-based
+              browsers. It allows you to synchronize your tabs across multiple
+              devices, making it easy to switch between devices and pick up
+              where you left off. Visit{" "}
+              <a
+                href="https://chromewebstore.google.com/detail/entangled/bpladjoppoackkpoegnmfbbccemijcec"
+                target="_blank"
+              >
+                Entangled
+              </a>{" "}
+              to install and{" "}
+              <a href="https://entangled-tabs.vercel.app" target="_blank">
+                entangled-tabs.vercel.app
+              </a>{" "}
+              to create an account.
+            </div>
           </div>
           <div className="proj-container">
             <div className="proj-title">SimpliFeed</div>
@@ -431,12 +289,13 @@ class App extends React.Component {
               loading="lazy"
             />
             <div className="proj-desc">
-              A web application for subscribing to RSS news feeds. I never found
-              a news app that I liked, and other RSS readers limit the user or
+              An application for subscribing to RSS news feeds. I never found a
+              news app that I liked, and other RSS readers limit the user or
               just display the news websites. I wanted a way to subscribe to the
               news feeds that I care about, without having to sift through all
-              of the ads and distractions. This app is built with Next.js and
-              uses Appwrite as a backend.
+              of the ads and distractions. This app is built with Next.js, uses
+              Appwrite as a backend, and can be installed as a Progressive Web
+              App.
             </div>
           </div>
           <div className="proj-container">
