@@ -246,7 +246,7 @@ class App extends React.Component {
               of the ads and distractions. This app is built with Next.js, uses
               Appwrite as a backend, and can be installed as a Progressive Web
               App. Visit{" "}
-              <a href="https://simplifeed.org" about="_blank" rel="noreferrer">
+              <a href="https://simplifeed.org" target="_blank" rel="noreferrer">
                 SimpliFeed
               </a>{" "}
               to get started.
