@@ -1,18 +1,6 @@
 import "./App.css";
 
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator,
-} from "@material-ui/lab";
-
-import Paper from "@material-ui/core/Paper";
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 
 class App extends React.Component {
   constructor(props) {
@@ -204,20 +192,24 @@ class App extends React.Component {
             className="icon-link"
             href="https://github.com/lamasters"
             target="_blank"
+            rel="noreferrer"
           >
             <img
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/gh.svg"
               className="icon"
+              alt="Github Icon"
             />
           </a>
           <a
             className="icon-link"
             href="https://linkedin.com/in/liam-a-masters"
             target="_blank"
+            rel="noreferrer"
           >
             <img
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/li.svg"
               className="icon"
+              alt="LinkedIn Icon"
             />
           </a>
         </div>
@@ -239,11 +231,34 @@ class App extends React.Component {
             Projects
           </div>
           <div className="proj-container">
+            <div className="proj-title">SimpliFeed</div>
+            <img
+              src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/simplifeed.png"
+              id="termcast-img"
+              loading="lazy"
+              alt="SimpliFeed website news feed screenshot"
+            />
+            <div className="proj-desc">
+              An application for subscribing to RSS news feeds. I never found a
+              news app that I liked, and other RSS readers limit the user or
+              just display the news websites. I wanted a way to subscribe to the
+              news feeds that I care about, without having to sift through all
+              of the ads and distractions. This app is built with Next.js, uses
+              Appwrite as a backend, and can be installed as a Progressive Web
+              App. Visit{" "}
+              <a href="https://simplifeed.org" about="_blank" rel="noreferrer">
+                SimpliFeed
+              </a>{" "}
+              to get started.
+            </div>
+          </div>
+          <div className="proj-container">
             <div className="proj-title">Bonjour Bites</div>
             <img
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/bonjour.png"
               id="bonjjour-img"
               loading="lazy"
+              alt="Bonjour Bites site screenshot"
             />
             <div className="proj-desc">
               I love the convenience of meal delivery services, but hate the
@@ -262,6 +277,7 @@ class App extends React.Component {
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/entangled.png"
               id="entangled-img"
               loading="lazy"
+              alt="Entangled Tabs chrome extension screenshot"
             />
             <div className="proj-desc">
               Entangled is a tab synchronization extension for chromium-based
@@ -271,31 +287,19 @@ class App extends React.Component {
               <a
                 href="https://chromewebstore.google.com/detail/entangled/bpladjoppoackkpoegnmfbbccemijcec"
                 target="_blank"
+                rel="noreferrer"
               >
                 Entangled
               </a>{" "}
               to install and{" "}
-              <a href="https://entangled-tabs.vercel.app" target="_blank">
+              <a
+                href="https://entangled-tabs.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+              >
                 entangled-tabs.vercel.app
               </a>{" "}
               to create an account.
-            </div>
-          </div>
-          <div className="proj-container">
-            <div className="proj-title">SimpliFeed</div>
-            <img
-              src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/simplifeed.png"
-              id="termcast-img"
-              loading="lazy"
-            />
-            <div className="proj-desc">
-              An application for subscribing to RSS news feeds. I never found a
-              news app that I liked, and other RSS readers limit the user or
-              just display the news websites. I wanted a way to subscribe to the
-              news feeds that I care about, without having to sift through all
-              of the ads and distractions. This app is built with Next.js, uses
-              Appwrite as a backend, and can be installed as a Progressive Web
-              App.
             </div>
           </div>
           <div className="proj-container">
@@ -304,6 +308,7 @@ class App extends React.Component {
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/term.png"
               id="termcast-img"
               loading="lazy"
+              alt="TermCast terminal podcast player screenshot"
             />
             <div className="proj-desc">
               A terminal-based podcast player. As someone who is always working
@@ -319,6 +324,7 @@ class App extends React.Component {
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/assistant.gif"
               id="assistant-img"
               loading="lazy"
+              alt="Animated gif of a robot assistant with a blinking eye"
             />
             <div className="proj-desc">
               A virtual assistant with an emotional touch. This assistant is
@@ -326,28 +332,6 @@ class App extends React.Component {
               3D printed body. Equipped with a custom version of Amazon Alexa
               software, it can express emotion with its digital eye based on
               voice prompts.
-            </div>
-          </div>
-          <div className="proj-container">
-            <div className="proj-title">Celesticom</div>
-            <img
-              src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/Celesticom.gif"
-              id="celesticom-img"
-              loading="lazy"
-            />
-            <div className="proj-desc">
-              Celesticom is a concept for an interplanetary and interstellar
-              satellite network. It operates similar to the SpaceX{" "}
-              <a
-                className="inline-link"
-                target="_blank"
-                href="https://www.starlink.com/"
-              >
-                Starlink{" "}
-              </a>
-              network but instead utilizes Lagrangian points and large networks
-              of inexpensive satellites to establish efficient communication
-              over vast distances.
             </div>
           </div>
           <div className="section-header" ref={sections[3]}>
@@ -361,10 +345,16 @@ class App extends React.Component {
           </div>
           <div id="gallery-container">
             {this.state.photos.map((photo) => {
-              return <img src={photo} id="gallery-photo" loading="lazy" />;
+              return (
+                <img
+                  src={photo}
+                  id="gallery-photo"
+                  loading="lazy"
+                  alt="Photography example"
+                />
+              );
             })}
           </div>
-          {/*<div className="section-header" ref={sections[4]}>Interests</div>*/}
         </div>
         <div id="footer">Liam Masters • 2021</div>
         {this.state.toTop}
