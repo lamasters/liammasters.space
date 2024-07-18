@@ -218,14 +218,10 @@ class App extends React.Component {
             Professional
           </div>
           <div className="proj-desc">
-            With an education in physics and a career in software engineering,
-            I've had the privelege of working on a variety of projects. I've
-            worked on everything from web applications to embedded systems, and
-            I'm always looking for new opportunities to learn and grow. I've
-            spent the last 5 years working in biotech, previously at Volta Labs
-            where I was building an instrument for automating genomic sequencing
-            sample prep. I'm currently at Insitro, where I work on the lab data
-            platform behind their target and drug discovery efforts.
+            I'm a full stack engineer working in biotech for the last 5 years.
+            With a background in physics, I have a passion for science and I
+            love building tech to further research. I'm also a hobbyist
+            photographer, musician, and homelabber.
           </div>
           <div className="section-header" ref={sections[1]}>
             Projects
@@ -239,13 +235,9 @@ class App extends React.Component {
               alt="SimpliFeed website news feed screenshot"
             />
             <div className="proj-desc">
-              An application for subscribing to RSS news feeds. I never found a
-              news app that I liked, and other RSS readers limit the user or
-              just display the news websites. I wanted a way to subscribe to the
-              news feeds that I care about, without having to sift through all
-              of the ads and distractions. This app is built with Next.js, uses
-              Appwrite as a backend, and can be installed as a Progressive Web
-              App. Visit{" "}
+              A news app with no ads and AI summaries. SimpliFeed lets you get
+              the news at a glance without the clutter and popups, and dive
+              deeper into the stories you care about. Visit{" "}
               <a href="https://simplifeed.org" target="_blank" rel="noreferrer">
                 SimpliFeed
               </a>{" "}
@@ -256,19 +248,16 @@ class App extends React.Component {
             <div className="proj-title">Bonjour Bites</div>
             <img
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/bonjour.png"
-              id="bonjjour-img"
+              id="bonjour-img"
               loading="lazy"
               alt="Bonjour Bites site screenshot"
             />
             <div className="proj-desc">
-              I love the convenience of meal delivery services, but hate the
-              price tag that comes along with them. Bonjour Bites aims to
-              provide the convenience of simple meals, with a planned weekly
-              menu without the cost of grocery delivery. Each week, a menu is
-              generated with the option to swap out meals. A shopping list is
-              then generated based on the meals selected, with full cooking
-              instructions available. Users can also search the database of
-              recipes if they have something specific in mind.
+              Bonjour Bites is everything good about meal delivery services
+              without the overpriced boxes. It gives you a weekly menu with lots
+              of additional recipes to choose from, and puts together a shopping
+              list for you so that you can make sure you're getting the best
+              deals.
             </div>
           </div>
           <div className="proj-container">
@@ -280,12 +269,12 @@ class App extends React.Component {
               alt="Entangled Tabs chrome extension screenshot"
             />
             <div className="proj-desc">
-              Entangled is a tab synchronization extension for chromium-based
-              browsers. It allows you to synchronize your tabs across multiple
-              devices, making it easy to switch between devices and pick up
+              Entangled is a tab synchronization website extension for
+              chromium-based browsers. It allows you to synchronize tabs across
+              your devices, making it easy to switch between devices and pick up
               where you left off. Visit{" "}
               <a
-                href="https://chromewebstore.google.com/detail/entangled/bpladjoppoackkpoegnmfbbccemijcec"
+                href="https://extension.entangledtabs.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -293,13 +282,13 @@ class App extends React.Component {
               </a>{" "}
               to install and{" "}
               <a
-                href="https://entangled-tabs.vercel.app"
+                href="https://entangledtabs.com"
                 target="_blank"
                 rel="noreferrer"
               >
-                entangled-tabs.vercel.app
+                entangledtabs.com
               </a>{" "}
-              to create an account.
+              to get started.
             </div>
           </div>
           <div className="proj-container">
@@ -356,7 +345,9 @@ class App extends React.Component {
             })}
           </div>
         </div>
-        <div id="footer">Liam Masters • 2021</div>
+        <div id="footer">
+          Liam Masters • {new Date(Date.now()).getFullYear()}
+        </div>
         {this.state.toTop}
         {this.state.showNav ? (
           <div id="navbar">
@@ -387,8 +378,6 @@ class App extends React.Component {
             >
               Photography
             </div>
-            {/*<div className="line"></div>
-          <div className="navlink" onClick={() => scrollToDiv(sections[4])}>Interests</div>*/}
           </div>
         ) : null}
       </div>
