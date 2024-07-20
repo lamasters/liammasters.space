@@ -160,6 +160,15 @@ img {
   margin: 25px;
 }
 
+.inline-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  color: #aaa;
+}
+
 #gallery-container {
   margin: auto;
   width: 70%;

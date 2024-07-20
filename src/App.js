@@ -245,7 +245,12 @@ class App extends React.Component {
               A news app with no ads and AI summaries. SimpliFeed lets you get
               the news at a glance without the clutter and popups, and dive
               deeper into the stories you care about. Visit{" "}
-              <a href="https://simplifeed.org" target="_blank" rel="noreferrer">
+              <a
+                className="inline-link"
+                href="https://simplifeed.org"
+                target="_blank"
+                rel="noreferrer"
+              >
                 SimpliFeed
               </a>{" "}
               to get started.
@@ -295,6 +300,7 @@ class App extends React.Component {
               your devices, making it easy to switch between devices and pick up
               where you left off. Visit{" "}
               <a
+                className="inline-link"
                 href="https://extension.entangledtabs.com"
                 target="_blank"
                 rel="noreferrer"
@@ -303,6 +309,7 @@ class App extends React.Component {
               </a>{" "}
               to install and{" "}
               <a
+                className="inline-link"
                 href="https://entangledtabs.com"
                 target="_blank"
                 rel="noreferrer"
