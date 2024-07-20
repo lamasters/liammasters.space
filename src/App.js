@@ -227,10 +227,17 @@ class App extends React.Component {
             Projects
           </div>
           <div className="proj-container">
-            <div className="proj-title">SimpliFeed</div>
+            <a
+              className="proj-title"
+              href="https://simplifeed.org"
+              rel="noreferrer"
+              target="_blank"
+            >
+              SimpliFeed
+            </a>
             <img
+              className="proj-image"
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/simplifeed.png"
-              id="termcast-img"
               loading="lazy"
               alt="SimpliFeed website news feed screenshot"
             />
@@ -245,10 +252,17 @@ class App extends React.Component {
             </div>
           </div>
           <div className="proj-container">
-            <div className="proj-title">Bonjour Bites</div>
+            <a
+              className="proj-title"
+              href="https://github.com/lamasters/bonjour-bites"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Bonjour Bites
+            </a>
             <img
+              className="proj-image"
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/bonjour.png"
-              id="bonjour-img"
               loading="lazy"
               alt="Bonjour Bites site screenshot"
             />
@@ -261,10 +275,17 @@ class App extends React.Component {
             </div>
           </div>
           <div className="proj-container">
-            <div className="proj-title">Entangled Tabs</div>
+            <a
+              className="proj-title"
+              href="https://entangledtabs.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Entangled Tabs
+            </a>
             <img
+              className="proj-image"
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/entangled.png"
-              id="entangled-img"
               loading="lazy"
               alt="Entangled Tabs chrome extension screenshot"
             />
@@ -292,10 +313,17 @@ class App extends React.Component {
             </div>
           </div>
           <div className="proj-container">
-            <div className="proj-title">TermCast</div>
+            <a
+              className="proj-title"
+              href="https://github.com/lamasters/termcast"
+              rel="noreferrer"
+              target="_blank"
+            >
+              TermCast
+            </a>
             <img
+              className="proj-image"
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/term.png"
-              id="termcast-img"
               loading="lazy"
               alt="TermCast terminal podcast player screenshot"
             />
@@ -310,8 +338,8 @@ class App extends React.Component {
           <div className="proj-container">
             <div className="proj-title">Virtual Assistant</div>
             <img
+              className="proj-image"
               src="https://raw.githubusercontent.com/lamasters/liammasters.space/master/assets/assistant.gif"
-              id="assistant-img"
               loading="lazy"
               alt="Animated gif of a robot assistant with a blinking eye"
             />
